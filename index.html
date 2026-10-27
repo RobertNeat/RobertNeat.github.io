@@ -1,121 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta.title">Robert Sereda — Portfolio</title>
-  <meta name="description" content="Portfolio Roberta Seredy — projekty, umiejętności, kontakt." data-i18n-attr="content:meta.description">
-  <link rel="icon" href="assets/images/avatar.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
-  <script>
-    (function () {
-      document.documentElement.classList.add('js');
-      try {
-        var theme = localStorage.getItem('theme') || 'light';
-        var lang = localStorage.getItem('lang') || 'pl';
-        document.documentElement.setAttribute('data-theme', theme);
-        document.documentElement.setAttribute('lang', lang);
-      } catch (e) {}
-    })();
-  </script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">Robert Sereda — Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio Roberta Seredy — projekty, umiejętności, kontakt."
+      data-i18n-attr="content:meta.description"
+    />
+    <link rel="icon" href="assets/images/avatar.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (function () {
+        document.documentElement.classList.add("js");
+        try {
+          var theme = localStorage.getItem("theme") || "light";
+          var lang = localStorage.getItem("lang") || "pl";
+          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.setAttribute("lang", lang);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="#home" class="logo">Robert<span>.</span></a>
 
-  <header class="site-header">
-    <nav class="navbar container">
-      <a href="#home" class="logo">Robert<span>.</span></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" data-i18n="nav.home">Start</a></li>
+          <li><a href="#about" data-i18n="nav.about">O mnie</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projekty</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" data-i18n="nav.home">Start</a></li>
-        <li><a href="#about" data-i18n="nav.about">O mnie</a></li>
-        <li><a href="#projects" data-i18n="nav.projects">Projekty</a></li>
-        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-      </ul>
-
-      <div class="nav-controls">
-        <!-- Przełącznik trybu jasny/ciemny wyłączony — mechanizm zostaje w CSS/JS do ewentualnego przywrócenia.
+        <div class="nav-controls">
+          <!-- Przełącznik trybu jasny/ciemny wyłączony — mechanizm zostaje w CSS/JS do ewentualnego przywrócenia.
         <button id="themeToggle" class="icon-btn" type="button" aria-label="Przełącz tryb jasny/ciemny" data-i18n-attr="aria-label:controls.themeToggle">
           <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
           <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
         </button>
         -->
-        <button id="langToggle" class="lang-btn" type="button" aria-label="Zmień język" data-i18n-attr="aria-label:controls.langToggle">
-          <span class="lang-code">PL</span>
-        </button>
-        <button class="nav-toggle" id="navToggle" aria-label="Przełącz menu" aria-expanded="false" data-i18n-attr="aria-label:controls.navToggle">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-  </header>
+          <button
+            id="langToggle"
+            class="lang-btn"
+            type="button"
+            aria-label="Zmień język"
+            data-i18n-attr="aria-label:controls.langToggle"
+          >
+            <span class="lang-code">PL</span>
+          </button>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Przełącz menu"
+            aria-expanded="false"
+            data-i18n-attr="aria-label:controls.navToggle"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-  <main>
-    <section id="home" class="hero container">
-      <div class="hero-text reveal">
-        <p class="hero-greeting" data-i18n="hero.greeting">Witaj, nazywam się</p>
-        <h1>Robert Sereda</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Tworzę aplikacje biznesowe w Java i Angular.</p>
-        <a href="#projects" class="btn btn-primary" data-i18n="hero.cta">Zobacz projekty</a>
-      </div>
-      <div class="hero-image reveal">
-        <img src="assets/images/avatar.png" alt="Zdjęcie profilowe" width="320" height="320" loading="eager" data-i18n-attr="alt:hero.avatarAlt">
-      </div>
-    </section>
+    <main>
+      <section id="home" class="hero container">
+        <div class="hero-text reveal">
+          <p class="hero-greeting" data-i18n="hero.greeting">
+            Witaj, nazywam się
+          </p>
+          <h1>Robert Sereda</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Tworzę aplikacje biznesowe w Java i Angular.
+          </p>
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta"
+            >Zobacz projekty</a
+          >
+        </div>
+        <div class="hero-image reveal">
+          <img
+            src="assets/images/avatar.png"
+            alt="Zdjęcie profilowe"
+            width="320"
+            height="320"
+            loading="eager"
+            data-i18n-attr="alt:hero.avatarAlt"
+          />
+        </div>
+      </section>
 
-    <section id="about" class="about container">
-      <h2 class="section-title reveal" data-i18n="about.title">O mnie</h2>
-      <p class="reveal" data-i18n="about.body">
-        Jestem programistą Java zainteresowanym UI/UX oraz technologiami webowymi. Mam doświadczenie
-        komercyjne w systemach urzędowo-księgowych. Zawodowo interesuję się poznawaniem wiedzy
-        dziedzinowej, którą można zamodelować za pomocą systemów informatycznych.
+      <section id="about" class="about container">
+        <h2 class="section-title reveal" data-i18n="about.title">O mnie</h2>
+        <p class="reveal" data-i18n="about.body">
+          Jestem programistą Java zainteresowanym UI/UX oraz technologiami
+          webowymi. Mam doświadczenie komercyjne w systemach
+          urzędowo-księgowych. Zawodowo interesuję się poznawaniem wiedzy
+          dziedzinowej, którą można zamodelować za pomocą systemów
+          informatycznych.
+        </p>
+      </section>
+
+      <section id="projects" class="projects container">
+        <h2 class="section-title reveal" data-i18n="projects.title">
+          Projekty
+        </h2>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <img
+              src="assets/images/project1.png"
+              alt="Hospital Information System"
+              loading="lazy"
+            />
+            <h3>Hospital Information System</h3>
+            <p data-i18n="projects.p1.desc">
+              System medyczny klasy enterprise, zgodny z branżowymi standardami.
+            </p>
+            <a
+              href="https://github.com/RobertNeat/Hospital_Information_System"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="projects.cta"
+              >Zobacz więcej</a
+            >
+          </article>
+
+          <article class="project-card reveal">
+            <img
+              src="assets/images/project2.png"
+              alt="Enterprise Banking Platform"
+              loading="lazy"
+            />
+            <h3>Enterprise Banking Platform</h3>
+            <p data-i18n="projects.p2.desc">
+              Modularna platforma core-bankingowa uwzględniająca regulacje,
+              obsługująca procesowanie kart, ryzyko kredytowe, egzekucję długów
+              oraz raportowanie regulacyjne.
+            </p>
+            <a
+              href="https://github.com/RobertNeat/Enterprise_Banking_Platform"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="projects.cta"
+              >Zobacz więcej</a
+            >
+          </article>
+
+          <article class="project-card reveal">
+            <img
+              src="assets/images/project3.png"
+              alt="CloudLess Print Bridge"
+              loading="lazy"
+            />
+            <h3>CloudLess Print Bridge</h3>
+            <p data-i18n="projects.p3.desc">
+              Samodzielnie hostowane, lokalne rozwiązanie do zarządzania
+              drukarkami 3D.
+            </p>
+            <a
+              href="https://github.com/RobertNeat/CloudLess_Print_Bridge"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="projects.cta"
+              >Zobacz więcej</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h2 class="section-title reveal" data-i18n="contact.title">Kontakt</h2>
+        <p class="reveal" data-i18n="contact.body">
+          Chcesz się ze mną skontaktować? Napisz:
+        </p>
+        <a
+          class="contact-email reveal"
+          href="mailto:robert.sereda.work@gmail.com"
+          >robert.sereda.work@gmail.com</a
+        >
+        <ul class="social-links reveal">
+          <li>
+            <a
+              href="https://github.com/RobertNeat"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/robert-sereda/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://orcid.org/0009-0003-8149-7628"
+              target="_blank"
+              rel="noopener noreferrer"
+              >ORCID</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <span data-i18n="footer.copyPrefix">&copy;</span>
+        <span id="year"></span> Robert Sereda.
+        <span data-i18n="footer.copySuffix">Wszelkie prawa zastrzeżone.</span>
       </p>
-    </section>
+    </footer>
 
-    <section id="projects" class="projects container">
-      <h2 class="section-title reveal" data-i18n="projects.title">Projekty</h2>
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <img src="assets/images/project1.png" alt="Hospital Information System" loading="lazy">
-          <h3>Hospital Information System</h3>
-          <p data-i18n="projects.p1.desc">System medyczny klasy enterprise, zgodny z branżowymi standardami.</p>
-          <a href="https://github.com/RobertNeat/Hospital_Information_System" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="projects.cta">Zobacz więcej</a>
-        </article>
+    <button
+      id="backToTop"
+      class="back-to-top"
+      aria-label="Przewiń do góry"
+      data-i18n-attr="aria-label:controls.backToTop"
+    >
+      ↑
+    </button>
 
-        <article class="project-card reveal">
-          <img src="assets/images/project2.png" alt="Enterprise Banking Platform" loading="lazy">
-          <h3>Enterprise Banking Platform</h3>
-          <p data-i18n="projects.p2.desc">Modularna platforma core-bankingowa uwzględniająca regulacje, obsługująca procesowanie kart, ryzyko kredytowe, egzekucję długów oraz raportowanie regulacyjne.</p>
-          <a href="https://github.com/RobertNeat/Enterprise_Banking_Platform" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="projects.cta">Zobacz więcej</a>
-        </article>
-
-        <article class="project-card reveal">
-          <img src="assets/images/project3.png" alt="CloudLess Print Bridge" loading="lazy">
-          <h3>CloudLess Print Bridge</h3>
-          <p data-i18n="projects.p3.desc">Samodzielnie hostowane, lokalne rozwiązanie do zarządzania drukarkami 3D.</p>
-          <a href="https://github.com/RobertNeat/CloudLess_Print_Bridge" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="projects.cta">Zobacz więcej</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="contact container">
-      <h2 class="section-title reveal" data-i18n="contact.title">Kontakt</h2>
-      <p class="reveal" data-i18n="contact.body">Chcesz się ze mną skontaktować? Napisz:</p>
-      <a class="contact-email reveal" href="mailto:robert.sereda.mail@gmail.com">robert.sereda.mail@gmail.com</a>
-      <ul class="social-links reveal">
-        <li><a href="https://github.com/RobertNeat" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/robert-sereda/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://orcid.org/0009-0003-8149-7628" target="_blank" rel="noopener noreferrer">ORCID</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p><span data-i18n="footer.copyPrefix">&copy;</span> <span id="year"></span> Robert Sereda. <span data-i18n="footer.copySuffix">Wszelkie prawa zastrzeżone.</span></p>
-  </footer>
-
-  <button id="backToTop" class="back-to-top" aria-label="Przewiń do góry" data-i18n-attr="aria-label:controls.backToTop">↑</button>
-
-  <script src="js/i18n.js" defer></script>
-  <script src="js/main.js" defer></script>
-</body>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
