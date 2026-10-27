@@ -62,3 +62,33 @@ if ('IntersectionObserver' in window) {
 } else {
   revealElements.forEach((el) => el.classList.add('is-visible'));
 }
+
+// Subtelny parallax okien projektów przy przewijaniu
+const featureWindows = document.querySelectorAll('.project-feature-window');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (featureWindows.length && !prefersReducedMotion) {
+  let ticking = false;
+
+  const updateParallax = () => {
+    const viewportHeight = window.innerHeight;
+
+    featureWindows.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
+      const progress = Math.max(-1, Math.min(1, centerOffset / viewportHeight));
+      el.style.setProperty('--parallax-y', `${(progress * 18).toFixed(2)}px`);
+    });
+
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  });
+
+  updateParallax();
+}

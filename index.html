@@ -105,68 +105,108 @@
         <h2 class="section-title reveal" data-i18n="projects.title">
           Projekty
         </h2>
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <img
-              src="assets/images/project1.png"
-              alt="Hospital Information System"
-              loading="lazy"
-            />
-            <h3>Hospital Information System</h3>
-            <p data-i18n="projects.p1.desc">
-              System medyczny klasy enterprise, zgodny z branżowymi standardami.
-            </p>
-            <a
-              href="https://github.com/RobertNeat/Hospital_Information_System"
-              class="btn btn-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-i18n="projects.cta"
-              >Zobacz więcej</a
-            >
+        <div class="project-showcase">
+          <article class="project-feature reveal" style="--accent: #1e90ff">
+            <div class="project-feature-info">
+              <img
+                class="project-feature-logo project-feature-logo--outline"
+                src="assets/images/his_logo.png"
+                alt="Hospital Information System logo"
+                loading="lazy"
+                width="56"
+                height="56"
+              />
+              <h3>Hospital Information System</h3>
+              <p data-i18n="projects.p1.desc">
+                System medyczny klasy enterprise, zgodny z branżowymi
+                standardami jak SNOMED CT, HL7 FHIR, ICD-10.
+              </p>
+              <a
+                href="https://github.com/RobertNeat/Hospital_Information_System"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="projects.cta"
+                >Zobacz więcej</a
+              >
+            </div>
+            <div class="project-feature-window">
+              <img
+                src="assets/images/his_project.png"
+                alt="Hospital Information System — zrzut ekranu"
+                loading="lazy"
+              />
+            </div>
           </article>
 
-          <article class="project-card reveal">
-            <img
-              src="assets/images/project2.png"
-              alt="Enterprise Banking Platform"
-              loading="lazy"
-            />
-            <h3>Enterprise Banking Platform</h3>
-            <p data-i18n="projects.p2.desc">
-              Modularna platforma core-bankingowa uwzględniająca regulacje,
-              obsługująca procesowanie kart, ryzyko kredytowe, egzekucję długów
-              oraz raportowanie regulacyjne.
-            </p>
-            <a
-              href="https://github.com/RobertNeat/Enterprise_Banking_Platform"
-              class="btn btn-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-i18n="projects.cta"
-              >Zobacz więcej</a
-            >
+          <article class="project-feature reveal" style="--accent: #d9731f">
+            <div class="project-feature-info">
+              <img
+                class="project-feature-logo"
+                src="assets/images/ebp_logo.png"
+                alt="Enterprise Banking Platform logo"
+                loading="lazy"
+                width="56"
+                height="56"
+              />
+              <h3>Enterprise Banking Platform</h3>
+              <p data-i18n="projects.p2.desc">
+                Modularna platforma core-bankingowa uwzględniająca regulacje
+                (IFRS 9, DORA, FATCA/CRS, PSD2/SCA), obsługująca procesowanie
+                kart, ryzyko kredytowe, egzekucję długów oraz raportowanie
+                regulacyjne (KNF, NBP, BFG).
+              </p>
+              <a
+                href="https://github.com/RobertNeat/Enterprise_Banking_Platform"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="projects.cta"
+                >Zobacz więcej</a
+              >
+            </div>
+            <div class="project-feature-window">
+              <img
+                src="assets/images/ebp_project.png"
+                alt="Enterprise Banking Platform — zrzut ekranu"
+                loading="lazy"
+              />
+            </div>
           </article>
 
-          <article class="project-card reveal">
-            <img
-              src="assets/images/project3.png"
-              alt="CloudLess Print Bridge"
-              loading="lazy"
-            />
-            <h3>CloudLess Print Bridge</h3>
-            <p data-i18n="projects.p3.desc">
-              Samodzielnie hostowane, lokalne rozwiązanie do zarządzania
-              drukarkami 3D.
-            </p>
-            <a
-              href="https://github.com/RobertNeat/CloudLess_Print_Bridge"
-              class="btn btn-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-i18n="projects.cta"
-              >Zobacz więcej</a
-            >
+          <article class="project-feature reveal" style="--accent: #4c8c42">
+            <div class="project-feature-info">
+              <img
+                class="project-feature-logo project-feature-logo--outline project-feature-logo--cover"
+                src="assets/images/3dprinter_logo.png"
+                alt="CloudLess Print Bridge logo"
+                loading="lazy"
+                width="56"
+                height="56"
+              />
+              <h3>CloudLess Print Bridge</h3>
+              <p data-i18n="projects.p3.desc">
+                Samodzielnie hostowane, lokalne rozwiązanie do zarządzania
+                drukarką 3D, wysyłanie plików druku (FTPS), monitorowanie
+                stanu drukarki (MQTT) i podgląd postępu druku w czasie
+                rzeczywistym (obsługa kamer IP i streamingu IoT).
+              </p>
+              <a
+                href="https://github.com/RobertNeat/CloudLess_Print_Bridge"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="projects.cta"
+                >Zobacz więcej</a
+              >
+            </div>
+            <div class="project-feature-window">
+              <img
+                src="assets/images/3dprinter_project.png"
+                alt="CloudLess Print Bridge — zrzut ekranu"
+                loading="lazy"
+              />
+            </div>
           </article>
         </div>
       </section>
@@ -223,9 +263,7 @@
       class="back-to-top"
       aria-label="Przewiń do góry"
       data-i18n-attr="aria-label:controls.backToTop"
-    >
-      ↑
-    </button>
+    ></button>
 
     <script src="js/i18n.js" defer></script>
     <script src="js/main.js" defer></script>
